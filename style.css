@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url("images/city-road.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  font-family: 'Poppins', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-area {
+  width: 400px;
+  height: 700px;
+
+  background: linear-gradient(
+    45deg,
+    #ff004c,
+    #ff7a00,
+    #ffd300,
+    #3cff00,
+    #00e6ff,
+    #0047ff,
+    #9b00ff
+  );
+  background-size: 400% 400%;
+  animation: rainbowSlide 6s ease infinite;
+
+  /* Blur of background image seen through the panel */
+  backdrop-filter: blur(15px);
+  background-blend-mode: overlay;
+
+  position: relative;
+  overflow: hidden;
+  border: 4px solid rgba(255,255,255,0.7);
+  border-radius: 20px;
+
+  /* Soft shadow around road */
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+
+/* SMALL CAR SIZE */
+.car {
+  width: 35px;
+  height: 65px;
+  background-image: url("images/red-car.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  bottom: 20px;
+  left: 135px; /* Center for small car */
+}
+
+.enemy {
+  width: 32px;
+  height: 62px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+}
+
+.line {
+  position: absolute;
+  width: 14px;
+  height: 140px;
+  border-radius: 10px;
+  left: calc(50% - 7px);
+  background: linear-gradient(
+    180deg,
+    #ff004c,
+    #ff7a00,
+    #ffd300,
+    #3cff00,
+    #00e6ff,
+    #0047ff,
+    #9b00ff
+  );
+  background-size: 100% 300%;
+  animation: rgbLines 3s linear infinite;
+  box-shadow: 0 0 20px rgba(255,255,255,0.4),
+              0 0 40px rgba(255,255,255,0.2);
+}
+
+@keyframes rgbLines {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 200%; }
+}
+
+
+.score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.start-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+
+.mobile-controls {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none; 
+}
+
+#left-btn,
+#right-btn {
+  position: absolute;
+  pointer-events: auto; 
+}
+
+#left-btn {
+  bottom: 0;
+  left: 25px;  
+}
+
+#right-btn {
+  bottom: 0;
+  right: 25px; 
+}
+
+
+.mobile-controls button {
+  width: 75px;
+  height: 75px;
+  background: #111;
+  color: #0affef;
+  border: 3px solid #0affef;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Neon glow */
+  box-shadow:
+    0 0 12px #0affef,
+    0 0 25px #0affef,
+    inset 0 0 10px #0affef;
+
+  /* Pulse animation */
+  animation: neonPulse 1.5s infinite alternate ease-in-out;
+
+  transition: 0.2s ease-in-out;
+}
+
+.mobile-controls button:active {
+  background: #0affef;
+  color: #111;
+  transform: scale(0.85);
+  box-shadow:
+    0 0 30px #0affef,
+    0 0 50px #0affef,
+    inset 0 0 20px #0affef;
+}
+
+/* Neon pulse keyframes */
+@keyframes neonPulse {
+  from {
+    box-shadow:
+      0 0 10px #0affef,
+      0 0 20px #0affef,
+      inset 0 0 5px #0affef;
+  }
+  to {
+    box-shadow:
+      0 0 20px #0affef,
+      0 0 40px #0affef,
+      inset 0 0 15px #0affef;
+  }
+}
+
+
+

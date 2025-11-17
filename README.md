@@ -1,49 +1,49 @@
 🎮 Features
 🏁 Core Gameplay
 
-Smooth left/right car controls
+# Smooth left/right car controls
 
-Mobile-friendly touch buttons
+# Mobile-friendly touch buttons
 
-Infinite road scrolling
+# Infinite road scrolling
 
-Random enemy cars
+# Random enemy cars
 
-Increasing difficulty
+# Increasing difficulty
 
-Score counter that updates every frame
+# Score counter that updates every frame
 
-✨ Visuals
+# ✨ Visuals
 
-RGB rainbow animated background
+# RGB rainbow animated background
 
-City road background with blur
+# City road background with blur
 
-Glowing round arrow buttons
+# Glowing round arrow buttons
 
-Jump ramps (8 types)
+# Jump ramps (8 types)
 
-Neon UI and animations
+# Neon UI and animations
 
-🔊 Sound & FX
+# 🔊 Sound & FX
 
-Movement sound
+# Movement sound
 
-Background music loop
+# Background music loop
 
-Crash sound
+# Crash sound
 
-Jump sound
+# Jump sound
 
-📱 Mobile Ready
+# 📱 Mobile Ready
 
-Big glow buttons
+# Big glow buttons
 
-Auto-resizing layout
+# Auto-resizing layout
 
-Prevents accidental scrolling
+# Prevents accidental scrolling
 
-📂 Project Structure
+# 📂 Project Structure
 car-racing-game/
 │
 ├── index.html
@@ -55,16 +55,12 @@ car-racing-game/
 │   ├── blue-car.png
 │   ├── red-car.png
 │   ├── yellow-car.png
-│   ├── city-bg.jpg
-│   ├── ramp1.png
-│   ├── ramp2.png
-│   └── ...
+│   ├── city-road.jpg
+│ 
 │
 └── sounds/
     ├── move.mp3
     ├── background.mp3
-    ├── jump.mp3
-    └── crash.mp3
 
 🕹️ How to Play
 Desktop
